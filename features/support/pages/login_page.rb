@@ -1,6 +1,6 @@
 class LoginPage < BasePage
   def go
-    visit "/"
+    visit "/login"
   end
 
   def with(email, pass)
