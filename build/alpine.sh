@@ -6,6 +6,7 @@ apk update && \
   libxml2-dev \
   libxslt-dev \
   postgresql-dev \
-  curl unzip libexif udev chromium chromium-chromedriver wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
+  apk add python py-pip curl unzip libexif udev chromium chromium-chromedriver xvfb && \
   udev \
   && rm -rf /var/cache/apk/*
+  # curl unzip libexif udev chromium chromium-chromedriver wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
