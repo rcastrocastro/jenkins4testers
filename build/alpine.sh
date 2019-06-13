@@ -7,10 +7,14 @@ apk update && \
   libxslt-dev \
   postgresql-dev \
   # curl unzip libexif udev chromium chromium-chromedriver wait4ports xvfb xorg-server dbus ttf-freefont mesa-dri-swrast \
-  install google-chrome-stable xvfb unzip libgconf-2-4 \
-  wget "https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip" \
-  unzip chromedriver_linux64.zip \
-  mv chromedriver /usr/bin/chromedriver \
-  chown root:root /usr/bin/chromedriver \
-  chmod +x /usr/bin/chromedriver \
+  chromium-chromedriver\
+  zlib-dev \
+  chromium \
+  xvfb \
+  wait4ports \
+  xorg-server \
+  dbus \
+  ttf-freefont \
+  mesa-dri-swrast \
+  udev
   && rm -rf /var/cache/apk/*
