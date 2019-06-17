@@ -3,7 +3,7 @@
 
 Quando("eu faço login com {string} e {string}") do |email, password|
   @login_page.go
-  page.driver.browser.save_screenshot "#{Dir.pwd}/log/screenshots/screenshot.png"
+  # page.driver.browser.save_screenshot "#{Dir.pwd}/log/screenshots/screenshot.png"
   @login_page.with(email, password)
 end
 
