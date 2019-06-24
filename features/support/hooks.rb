@@ -12,3 +12,6 @@ Before("@login") do
   @login_page.with(user["email"], user["pass"])
 end
 
+After do
+  page.save_page("log/teste.html")
+end

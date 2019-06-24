@@ -16,6 +16,7 @@ Funcionalidade: Busca
             | Batman O Cavaleiro das Trevas          |
             | Batman O Cavaleiro das Trevas Ressurge |
 
+    @smoke
     Cenario: Busca 404
 
         Quando eu faço uma busca pelo termo "American Pie"
