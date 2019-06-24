@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Tests") {
             steps {
-                sh "bundle exec cucumber -p ci"
+                sh "bundle exec cucumber -p ci -t @smoke"
                 cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'log', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
             }
         }
