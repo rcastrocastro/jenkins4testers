@@ -1,12 +1,10 @@
+# Pull base image
 FROM ruby:alpine
-
-"http://dl-4.alpinelinux.org/alpine/v3.9/main" >> /etc/apk/repositories && \
-"http://dl-4.alpinelinux.org/alpine/v3.9/community" >> /etc/apk/repositories
 
 RUN apk update && \
   apk add build-base \
+  curl ruby musl-dev make linux-headers \
   bash \
-  ruby \
   libxml2-dev \
   libxslt-dev \
   postgresql-dev \
@@ -14,4 +12,4 @@ RUN apk update && \
   udev \
   && rm -rf /var/cache/apk/*
 
-  RUN "/bin/sh"
+RUN "/bin/sh"
