@@ -10,4 +10,8 @@ RUN apk update && \
   udev \
   && rm -rf /var/cache/apk/*
 
+  RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+  RUN curl -L https://get.rvm.io | bash -s stable
+  RUN /bin/bash -l -c ". /etc/profile.d/rvm.sh && rvm install 2.6.1"
+
   RUN "/bin/sh"
